@@ -28,14 +28,35 @@
 .slick-slider{position: relative;
   .slick-track,.slick-list {}
   .slick-list{overflow: hidden;}
-  .slick-track{@include flexbox();}
+  .slick-track{
+    @include flexbox();
+    align-items: flex-start;
+  }
   .slick-slide{}
   .slick-dots{
+    margin: 100px 0 0 0;
+    @include flexbox();
+    align-items: center;
+    justify-content: center;
     li{
-      button{}
-      &.slick-active{
-        button{}
+      list-style: none;
+      margin: 0 5px;
+      button{
+        font-size: 0;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        border: #c8c8c8 1px solid;
+        background-color: transparent;
       }
+      &.slick-active{
+        button{
+          background-color: #a9afb3;
+        }
+      }
+    }
+    @media (max-width: 1100px){
+      margin: 50px 0 0 0;
     }
   }
 }

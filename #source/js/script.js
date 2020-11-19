@@ -6,6 +6,10 @@ $('.icon-menu').click(function(event) {
     $('body').toggleClass('lock');
 });
 
+// $(document).ready(function(){
+//     $('slider').slick();
+// });
+
 // function ibg(){
 //     $.each($('.ibg'), function(index, val) {
 //         if($(this).find('img').length > 0){
